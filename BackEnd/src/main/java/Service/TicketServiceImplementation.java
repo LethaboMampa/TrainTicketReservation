@@ -36,5 +36,7 @@ public class TicketServiceImplementation implements TicketService
     }
 
     @Override
-    public List<Ticket> getAllTickets() {}
+    public List<Ticket> getAllTickets() {
+        return ticketRepository.findAll();
+    }
 }

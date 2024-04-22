@@ -27,4 +27,15 @@ public class AdminServiceImpl implements AdminService {
         adminRepository.deleteById(adminId);
 
     }
+
+    @Override
+    public Admin getAdminById(Long adminId) {
+        return adminRepository.findById(adminId).orElse(null);
+    }
+
+    @Override
+    public List<Admin> getAllAdmins() {
+        return adminRepository.findAll();
+    }
 }
+
